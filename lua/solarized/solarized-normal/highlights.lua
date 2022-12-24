@@ -19,9 +19,9 @@ g.colors_name = 'solarized-normal'
 function M.load_syntax(colors)
 	local syntax = {}
 
-	syntax['Normal'] = {fg=colors.base1,bg=utils.termtrans(colors.base03)}
+	syntax['Normal'] = {fg=colors.base0,bg=utils.termtrans(colors.base03)}
 	syntax['FoldColumn'] = {fg=colors.base0,bg=utils.termtrans(colors.base02)}
-	syntax['Folded'] = {fg=colors.base0,bg=utils.termtrans(colors.base02),guisp=colors.base03,style='bold'}
+	syntax['Folded'] = {fg=colors.base01,bg=utils.termtrans(colors.base03),guisp=colors.base03}
 	syntax['Terminal'] = syntax['Normal']
 	syntax['ToolbarButton'] = {fg=colors.base1,bg=utils.termtrans(colors.base02),style='bold'}
 	syntax['ToolbarLine'] = {fg=colors.none,bg=utils.termtrans(colors.base02)}
@@ -72,7 +72,7 @@ function M.load_syntax(colors)
 	if g.solarized_visibility == 'high' then
 		syntax['CursorLineNr'] = {fg=colors.orange,bg=colors.base02,style='bold'}
 		syntax['LineNr'] = {fg=colors.base0,bg=colors.base02,}
-		syntax['NonText'] = {fg=colors.orange,style='bold'}
+		syntax['NonText'] = {fg=colors.base02,style='bold'}
 		syntax['SpecialKey'] = {fg=colors.orange,style='reverse'}
 		syntax['SpellBad'] = {fg=colors.violet,bg=colors.base3,guisp=colors.red,style='reverse,undercurl'}
 		syntax['SpellCap'] = {fg=colors.violet,bg=colors.base3,guisp=colors.red,style='reverse,undercurl'}
@@ -82,7 +82,7 @@ function M.load_syntax(colors)
 	elseif g.solarized_visibility == 'low' then
 		syntax['CursorLineNr'] = {fg=colors.base01,bg=colors.base02,style='bold'}
 		syntax['LineNr'] = {fg=colors.base01,bg=colors.base02,}
-		syntax['NonText'] = {fg=colors.base02,style='bold'}
+		syntax['NonText'] = {fg=colors.base02}
 		syntax['SpecialKey'] = {fg=colors.base02,style='reverse'}
 		syntax['SpellBad'] = {fg=colors.violet,guisp=colors.violet,style='undercurl'}
 		syntax['SpellCap'] = {fg=colors.violet,guisp=colors.violet,style='undercurl'}
@@ -92,8 +92,8 @@ function M.load_syntax(colors)
 	else
 		syntax['CursorLineNr'] = {fg=colors.base0,bg=colors.base02,style='bold'}
 		syntax['LineNr'] = {fg=colors.base00,bg=colors.base02,}
-		syntax['NonText'] = {fg=colors.base00,style='bold'}
-		syntax['SpecialKey'] = {fg=colors.base00,bg=colors.base02,style='bold'}
+		syntax['NonText'] = {fg=colors.base02}
+		syntax['SpecialKey'] = {fg=colors.base01,bg=colors.base02,style='bold'}
 		syntax['SpellBad'] = {fg=colors.violet,guisp=colors.violet,style='undercurl'}
 		syntax['SpellCap'] = {fg=colors.violet,guisp=colors.violet,style='undercurl'}
 		syntax['SpellLocal'] = {fg=colors.yellow,guisp=colors.yellow,style='undercurl'}
@@ -117,7 +117,7 @@ function M.load_syntax(colors)
 	syntax['PmenuThumb'] = {fg=colors.none,bg=colors.base0}
 	syntax['Question'] = {fg=colors.cyan,style='bold'}
 	syntax['Search'] = {fg=colors.yellow,style='reverse'}
-	syntax['SignColumn'] = {fg=colors.base0}
+	syntax['SignColumn'] = {fg=colors.base0,bg=colors.base02}
 	syntax['Visual'] = {fg=colors.base01,bg=colors.base03,style='reverse'}
 	syntax['VisualNOS'] = {fg=colors.none,bg=colors.base02,style='reverse'}
 	syntax['WarningMsg'] = {fg=colors.orange,style='bold'}
@@ -352,14 +352,14 @@ function M.load_syntax(colors)
 	syntax['TSConditional'] = syntax['Conditional']
 	syntax['TSConstant'] = syntax['Constant']
 	syntax['TSConstBuiltin'] = syntax['Constant']
-	syntax['TSConstMacro'] = syntax['Constant']
+	syntax['TSConstMacro'] = syntax['Define']
 	syntax['TSError'] = {fg=colors.red}
 	syntax['TSException'] = syntax['Exception']
-	syntax['TSField'] = syntax['Identifier']
+	syntax['TSField'] = syntax['Normal']
 	syntax['TSFloat'] = syntax['Float']
 	syntax['TSFunction'] = syntax['Function']
 	syntax['TSFuncBuiltin'] = syntax['Function']
-	syntax['TSFuncMacro'] = syntax['Function']
+	syntax['TSFuncMacro'] = syntax['Define']
 	syntax['TSInclude'] = syntax['Include']
 	syntax['TSKeyword'] = syntax['Keyword']
 	syntax['TSLabel'] = syntax['Label']
@@ -381,7 +381,7 @@ function M.load_syntax(colors)
 	syntax['TSKeywordFunction'] = syntax['Identifier']
 	syntax['TSLiteral'] = syntax['Normal']
 	syntax['TSParameter'] = syntax['Identifier']
-	syntax['TSVariable'] = {fg=colors.base1}
+	syntax['TSVariable'] = {fg=colors.base0}
 	syntax['TSVariableBuiltin'] = syntax['Identifier']
 	syntax['TSTag'] = syntax['Special']
 	syntax['TSTagDelimiter'] = syntax['Delimiter']
@@ -455,12 +455,12 @@ function M.load_syntax(colors)
 
 	syntax['@storageclass'] = syntax['StorageClass']
 	syntax['@attribute'] = syntax['Identifier']
-	syntax['@field'] = syntax['Identifier']
-	syntax['@property'] = syntax['Identifier']
+	syntax['@field'] = syntax['Normal']
+	syntax['@property'] = syntax['Normal']
 	-- }}}
 
 	-- Identifiers {{{
-	syntax['@variable'] = {fg=colors.base1}
+	syntax['@variable'] = syntax['Normal']
 	syntax['@variable.builtin'] = syntax['Special']
 
 	syntax['@constant'] = syntax['Constant']
