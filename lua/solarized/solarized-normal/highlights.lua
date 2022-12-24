@@ -14,7 +14,7 @@ if fn.exists("syntax_on") then
 	cmd('syntax reset')
 end
 
-g.colors_name = 'solarized'
+g.colors_name = 'solarized-normal'
 
 function M.load_syntax(colors)
 	local syntax = {}

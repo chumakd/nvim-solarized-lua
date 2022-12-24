@@ -77,7 +77,7 @@ end
 - **solarized**
 
 The normal solarized scheme.  
-`vim.cmd('colorscheme solarized')`
+`vim.cmd('colorscheme solarized-normal')`
 
 - **solarized-high**
 
