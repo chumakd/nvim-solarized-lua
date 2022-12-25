@@ -64,7 +64,7 @@ function M.load_syntax(colors)
 		syntax['StatusLine'] = {fg=colors.base0,bg=colors.base02,style='reverse'}
 		syntax['StatusLineNC'] = {fg=colors.base01,bg=colors.base02,style='reverse'}
 		syntax['TabLine'] = {fg=colors.base01,bg=colors.base02,style='reverse'}
-		syntax['TabLineFill'] = {fg=colors.base01,bg=colors.base02,style='reverse'}
+		syntax['TabLineFill'] = {fg=colors.base01,bg=colors.base02}
 		syntax['TabLineSel'] = {fg=colors.base0,bg=colors.base02,style='reverse'}
 		syntax['VertSplit'] = {fg=colors.base01}
 	end
@@ -101,14 +101,14 @@ function M.load_syntax(colors)
 		syntax['Title'] = {fg=colors.orange,style='bold'}
 	end
 
-	syntax['ColorColumn'] = {fg=colors.none,bg=colors.base02}
+	syntax['ColorColumn'] = {fg=colors.none,bg=utils.termtrans(colors.base02)}
 	syntax['Conceal'] = {fg=colors.blue}
-	syntax['CursorColumn'] = {fg=colors.none,bg=colors.base02}
+	syntax['CursorColumn'] = {fg=colors.none,bg=utils.termtrans(colors.base02)}
 	syntax['Directory'] = {fg=colors.blue}
 	syntax['EndOfBuffer'] = {fg=colors.none,ctermfg=colors.none,ctermbg=colors.none}
 	syntax['ErrorMsg'] = {fg=colors.red,bg=colors.err_bg,style='reverse'}
 	syntax['IncSearch'] = {fg=colors.orange,style='standout'}
-	syntax['MatchParen'] = {fg=colors.base3,bg=colors.base02,style='bold'}
+	syntax['MatchParen'] = {fg=colors.none,bg=colors.base02,style='bold'}
 	syntax['ModeMsg'] = {fg=colors.blue}
 	syntax['MoreMsg'] = {fg=colors.blue}
 	syntax['Pmenu'] = {fg=colors.base1,bg=colors.base02}
@@ -117,7 +117,7 @@ function M.load_syntax(colors)
 	syntax['PmenuThumb'] = {fg=colors.none,bg=colors.base0}
 	syntax['Question'] = {fg=colors.cyan,style='bold'}
 	syntax['Search'] = {fg=colors.yellow,style='reverse'}
-	syntax['SignColumn'] = {fg=colors.base0,bg=colors.base02}
+	syntax['SignColumn'] = {fg=colors.base0,bg=utils.termtrans(colors.base02)}
 	syntax['Visual'] = {fg=colors.base01,bg=colors.base03,style='reverse'}
 	syntax['VisualNOS'] = {fg=colors.none,bg=colors.base02,style='reverse'}
 	syntax['WarningMsg'] = {fg=colors.orange,style='bold'}
@@ -430,7 +430,7 @@ function M.load_syntax(colors)
 	syntax['@method.call'] = syntax['Function']
 
 	syntax['@constructor'] = syntax['Special']
-	syntax['@parameter'] = syntax['Normal']
+	syntax['@parameter'] = {fg=colors.base0}
 	-- }}}
 
 	-- Keywords {{{
@@ -460,7 +460,7 @@ function M.load_syntax(colors)
 	-- }}}
 
 	-- Identifiers {{{
-	syntax['@variable'] = syntax['Normal']
+	syntax['@variable'] = {fg=colors.base0}
 	syntax['@variable.builtin'] = syntax['Special']
 
 	syntax['@constant'] = syntax['Constant']
@@ -498,10 +498,10 @@ function M.load_syntax(colors)
 	-- }}}
 	-- END Neovim >= 0.8
 
-	syntax['DiagnosticError'] = {fg=colors.red,guisp=colors.red,style='none'}
-	syntax['DiagnosticWarn'] = {fg=colors.yellow,guisp=colors.yellow,style='none'}
-	syntax['DiagnosticInfo'] = {fg=colors.cyan,guisp=colors.cyan,style='none'}
-	syntax['DiagnosticHint'] = {fg=colors.green,guisp=colors.green,style='none'}
+	syntax['DiagnosticError'] = {fg=colors.red,guisp=colors.red,bg=utils.termtrans(colors.base02),style='none'}
+	syntax['DiagnosticWarn'] = {fg=colors.yellow,guisp=colors.yellow,bg=utils.termtrans(colors.base02),style='none'}
+	syntax['DiagnosticInfo'] = {fg=colors.cyan,guisp=colors.cyan,bg=utils.termtrans(colors.base02),style='none'}
+	syntax['DiagnosticHint'] = {fg=colors.green,guisp=colors.green,bg=utils.termtrans(colors.base02),style='none'}
 	syntax['DiagnosticUnderlineError'] = {fg=colors.none,guisp=colors.red,style='underline'}
 	syntax['DiagnosticUnderlineWarn'] = {fg=colors.none,guisp=colors.yellow,style='underline'}
 	syntax['DiagnosticUnderlineInfo'] = {fg=colors.none,guisp=colors.cyan,style='underline'}
@@ -585,6 +585,9 @@ function M.load_syntax(colors)
 	syntax['NavicIconsTypeParameter'] = syntax['CmpItemKindTypeParameter']
 	syntax['NavicText'] = syntax['LineNr']
 	syntax['NavicSeparator'] = syntax['Comment']
+
+	syntax['SignatureMarkText'] = {fg=colors.magenta,bg=utils.termtrans(colors.base02)}
+	syntax['SignatureMarkerText'] = {fg=colors.magenta,bg=utils.termtrans(colors.base02)}
 
 	for group, highlights in pairs(syntax) do
 		utils.highlighter(group, highlights)
