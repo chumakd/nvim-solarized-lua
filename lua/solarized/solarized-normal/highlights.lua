@@ -455,8 +455,8 @@ function M.load_syntax(colors)
 
 	syntax['@storageclass'] = syntax['StorageClass']
 	syntax['@attribute'] = syntax['Identifier']
-	syntax['@field'] = syntax['Normal']
-	syntax['@property'] = syntax['Normal']
+	syntax['@field'] = {fg=colors.base0}
+	syntax['@property'] = {fg=colors.base0}
 	-- }}}
 
 	-- Identifiers {{{
