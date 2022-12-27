@@ -589,6 +589,8 @@ function M.load_syntax(colors)
 	syntax['SignatureMarkText'] = {fg=colors.magenta,bg=utils.termtrans(colors.base02)}
 	syntax['SignatureMarkerText'] = {fg=colors.magenta,bg=utils.termtrans(colors.base02)}
 
+	--syntax['AutoHighlightWord'] = {fg=colors.none,bg=utils.termtrans(colors.base02),style='bold'}
+
 	for group, highlights in pairs(syntax) do
 		utils.highlighter(group, highlights)
 	end
