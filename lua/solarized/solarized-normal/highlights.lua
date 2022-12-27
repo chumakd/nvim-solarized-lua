@@ -108,7 +108,7 @@ function M.load_syntax(colors)
 	syntax['EndOfBuffer'] = {fg=colors.none,ctermfg=colors.none,ctermbg=colors.none}
 	syntax['ErrorMsg'] = {fg=colors.red,bg=colors.err_bg,style='reverse'}
 	syntax['IncSearch'] = {fg=colors.orange,style='standout'}
-	syntax['MatchParen'] = {fg=colors.none,bg=colors.base02,style='bold'}
+	syntax['MatchParen'] = {fg=colors.none,bg=utils.termtrans(colors.base02),style='bold'}
 	syntax['ModeMsg'] = {fg=colors.blue}
 	syntax['MoreMsg'] = {fg=colors.blue}
 	syntax['Pmenu'] = {fg=colors.base1,bg=colors.base02}
