@@ -355,7 +355,7 @@ function M.load_syntax(colors)
 	syntax['TSConstMacro'] = syntax['Define']
 	syntax['TSError'] = {fg=colors.red}
 	syntax['TSException'] = syntax['Exception']
-	syntax['TSField'] = syntax['Normal']
+	syntax['TSField'] = syntax['Identifier']
 	syntax['TSFloat'] = syntax['Float']
 	syntax['TSFunction'] = syntax['Function']
 	syntax['TSFuncBuiltin'] = syntax['Function']
@@ -455,7 +455,7 @@ function M.load_syntax(colors)
 
 	syntax['@storageclass'] = syntax['StorageClass']
 	syntax['@attribute'] = syntax['Identifier']
-	syntax['@field'] = {fg=colors.base0}
+	syntax['@field'] = syntax['Identifier']
 	syntax['@property'] = {fg=colors.base0}
 	-- }}}
 
