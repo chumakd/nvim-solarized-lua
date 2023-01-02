@@ -117,6 +117,7 @@ function M.load_syntax(colors)
 	syntax['PmenuThumb'] = {fg=colors.none,bg=colors.base0}
 	syntax['Question'] = {fg=colors.cyan,style='bold'}
 	syntax['Search'] = {fg=colors.yellow,style='reverse'}
+	syntax['YankPaste'] = {fg=colors.violet,style='reverse'}
 	syntax['SignColumn'] = {fg=colors.base0,bg=utils.termtrans(colors.base02)}
 	syntax['Visual'] = {fg=colors.base01,bg=colors.base03,style='reverse'}
 	syntax['VisualNOS'] = {fg=colors.none,bg=colors.base02,style='reverse'}
@@ -590,6 +591,9 @@ function M.load_syntax(colors)
 	syntax['SignatureMarkerText'] = {fg=colors.magenta,bg=utils.termtrans(colors.base02)}
 
 	--syntax['AutoHighlightWord'] = {fg=colors.none,bg=utils.termtrans(colors.base02),style='bold'}
+
+	syntax['YankyPut'] = syntax['YankPaste']
+	syntax['YankyYanked'] = syntax['YankPaste']
 
 	for group, highlights in pairs(syntax) do
 		utils.highlighter(group, highlights)
