@@ -595,6 +595,8 @@ function M.load_syntax(colors)
 	syntax['YankyPut'] = syntax['YankPaste']
 	syntax['YankyYanked'] = syntax['YankPaste']
 
+	syntax['GitvSubj'] = {fg=colors.base0}
+
 	for group, highlights in pairs(syntax) do
 		utils.highlighter(group, highlights)
 	end
