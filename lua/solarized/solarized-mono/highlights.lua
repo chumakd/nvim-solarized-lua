@@ -184,11 +184,11 @@ function M.load_syntax(colors)
 	syntax['texmathmatcher'] = {fg=colors.yellow}
 	syntax['texreflabel'] = {fg=colors.base01}
 	syntax['rubyDefine'] = {fg=colors.base1,style='bold'}
-	syntax['rubyBoolean'] = {fg=colors.magenta}
+	syntax['rubyBoolean'] = {fg=colors.base1}
 	syntax['cPreCondit'] = {fg=colors.base0}
 	syntax['VarId'] = {fg=colors.blue}
 	syntax['ConId'] = {fg=colors.yellow}
-	syntax['hsImport'] = {fg=colors.magenta}
+	syntax['hsImport'] = {fg=colors.base2}
 	syntax['hsString'] = {fg=colors.base00}
 	syntax['hsStructure'] = {fg=colors.cyan}
 	syntax['hs_hlFunctionName'] = {fg=colors.base1,style=utils.italics()}
