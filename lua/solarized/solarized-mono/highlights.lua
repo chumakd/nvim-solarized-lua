@@ -78,7 +78,7 @@ function M.load_syntax(colors)
 		syntax['SpellCap'] = {fg=colors.violet,bg=colors.base3,guisp=colors.red,style='reverse,undercurl'}
 		syntax['SpellLocal'] = {fg=colors.yellow,bg=colors.base3,guisp=colors.red,style='reverse,undercurl'}
 		syntax['SpellRare'] = {fg=colors.cyan,bg=colors.base3,guisp=colors.red,style='reverse,undercurl'}
-		syntax['Title'] = {fg=colors.yellow,style='bold'}
+		syntax['Title'] = {fg=colors.base1,style='bold'}
 	elseif g.solarized_visibility == 'low' then
 		syntax['CursorLineNr'] = {fg=colors.base01,bg=colors.base02,style='bold'}
 		syntax['LineNr'] = {fg=colors.base01,bg=colors.base02,}
@@ -133,7 +133,7 @@ function M.load_syntax(colors)
 	syntax['Special'] = {fg=colors.base0,style='bold'}
 	syntax['Statement'] = {fg=colors.base0,style='bold'}
 	syntax['Todo'] = {fg=colors.magenta,style='bold'}
-	syntax['Type'] = {fg=colors.yellow}
+	syntax['Type'] = {fg=colors.base1,style=utils.italics()}
 	syntax['Text'] = {fg=colors.base01}
 	syntax['Strikethrough'] = {fg=colors.base01,strikethrough=true}
 	syntax['Underlined'] = {fg=colors.violet}
@@ -143,7 +143,7 @@ function M.load_syntax(colors)
 	syntax['VisualMode'] = {fg=colors.magenta,bg=colors.base3,style='reverse'}
 	syntax['CommandMode'] = {fg=colors.magenta,bg=colors.base3,style='reverse'}
 	syntax['vimCommentString'] = {fg=colors.violet}
-	syntax['vimCommand'] = {fg=colors.yellow}
+	syntax['vimCommand'] = {fg=colors.base02}
 	syntax['vimCmdSep'] = {fg=colors.blue,style='bold'}
 	syntax['helpExample'] = {fg=colors.base1}
 	syntax['helpOption'] = {fg=colors.cyan}
@@ -175,14 +175,14 @@ function M.load_syntax(colors)
 	syntax['htmlTagName'] = {fg=colors.blue,style='bold'}
 	syntax['htmlSpecialTagName'] = {fg=colors.blue,style=utils.italics()}
 	syntax['htmlArg'] = {fg=colors.base00}
-	syntax['javaScript'] = {fg=colors.yellow}
+	syntax['javaScript'] = {fg=colors.base0}
 	syntax['perlHereDoc'] = {fg=colors.base1}
-	syntax['perlVarPlain'] = {fg=colors.yellow}
+	syntax['perlVarPlain'] = {fg=colors.base0}
 	syntax['perlStatementFileDesc'] = {fg=colors.cyan}
 	syntax['texstatement'] = {fg=colors.cyan}
-	syntax['texmathzonex'] = {fg=colors.yellow}
+	syntax['texmathzonex'] = {fg=colors.base00}
 	syntax['texmathmatcher'] = {fg=colors.yellow}
-	syntax['texreflabel'] = {fg=colors.yellow}
+	syntax['texreflabel'] = {fg=colors.base01}
 	syntax['rubyDefine'] = {fg=colors.base1,style='bold'}
 	syntax['rubyBoolean'] = {fg=colors.magenta}
 	syntax['cPreCondit'] = {fg=colors.base0}
@@ -194,10 +194,10 @@ function M.load_syntax(colors)
 	syntax['hs_hlFunctionName'] = {fg=colors.blue}
 	syntax['hsStatement'] = {fg=colors.cyan}
 	syntax['hsImportLabel'] = {fg=colors.cyan}
-	syntax['hs_OpFunctionName'] = {fg=colors.yellow}
+	syntax['hs_OpFunctionName'] = {fg=colors.base01}
 	syntax['hs_DeclareFunction'] = {fg=colors.base0}
 	syntax['hsVarSym'] = {fg=colors.cyan}
-	syntax['hsType'] = {fg=colors.yellow}
+	syntax['hsType'] = {fg=colors.base01}
 	syntax['hsTypedef'] = {fg=colors.cyan}
 	syntax['hsModuleName'] = {fg=colors.base1}
 	syntax['pandocTitleBlock'] = {fg=colors.blue}
