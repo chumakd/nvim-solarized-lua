@@ -199,7 +199,7 @@ function M.load_syntax(colors)
 	syntax['hsVarSym'] = {fg=colors.cyan}
 	syntax['hsType'] = {fg=colors.yellow}
 	syntax['hsTypedef'] = {fg=colors.cyan}
-	syntax['hsModuleName'] = {fg=colors.green}
+	syntax['hsModuleName'] = {fg=colors.base1}
 	syntax['pandocTitleBlock'] = {fg=colors.blue}
 	syntax['pandocTitleBlockTitle'] = {fg=colors.blue,style='bold'}
 	syntax['pandocTitleComment'] = {fg=colors.blue,style='bold'}
