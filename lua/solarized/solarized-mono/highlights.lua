@@ -70,10 +70,10 @@ function M.load_syntax(colors)
 	end
 
 	if g.solarized_visibility == 'high' then
-		syntax['CursorLineNr'] = {fg=colors.orange,bg=colors.base02,style='bold'}
+		syntax['CursorLineNr'] = {fg=colors.base0,bg=colors.base02,style='bold'}
 		syntax['LineNr'] = {fg=colors.base0,bg=colors.base02,}
 		syntax['NonText'] = {fg=colors.base02,style='bold'}
-		syntax['SpecialKey'] = {fg=colors.orange,style='reverse'}
+		syntax['SpecialKey'] = {fg=colors.base0,style='reverse'}
 		syntax['SpellBad'] = {fg=colors.violet,bg=colors.base3,guisp=colors.red,style='reverse,undercurl'}
 		syntax['SpellCap'] = {fg=colors.violet,bg=colors.base3,guisp=colors.red,style='reverse,undercurl'}
 		syntax['SpellLocal'] = {fg=colors.yellow,bg=colors.base3,guisp=colors.red,style='reverse,undercurl'}
@@ -98,7 +98,7 @@ function M.load_syntax(colors)
 		syntax['SpellCap'] = {fg=colors.violet,guisp=colors.violet,style='undercurl'}
 		syntax['SpellLocal'] = {fg=colors.yellow,guisp=colors.yellow,style='undercurl'}
 		syntax['SpellRare'] = {fg=colors.cyan,guisp=colors.cyan,style='undercurl'}
-		syntax['Title'] = {fg=colors.orange,style='bold'}
+		syntax['Title'] = {fg=colors.base0,style='bold'}
 	end
 
 	syntax['ColorColumn'] = {fg=colors.none,bg=utils.termtrans(colors.base02)}
@@ -129,7 +129,7 @@ function M.load_syntax(colors)
 	syntax['Error'] = {fg=colors.red,bg=colors.err_bg,style='bold,reverse'}
 	syntax['Identifier'] = {fg=colors.base0}
 	syntax['Ignore'] = {fg=colors.none,ctermfg=colors.none,ctermbg=colors.none}
-	syntax['PreProc'] = {fg=colors.orange}
+	syntax['PreProc'] = {fg=colors.base0}
 	syntax['Special'] = {fg=colors.base0,style='bold'}
 	syntax['Statement'] = {fg=colors.base0,style='bold'}
 	syntax['Todo'] = {fg=colors.magenta,style='bold'}
@@ -185,7 +185,7 @@ function M.load_syntax(colors)
 	syntax['texreflabel'] = {fg=colors.yellow}
 	syntax['rubyDefine'] = {fg=colors.base1,style='bold'}
 	syntax['rubyBoolean'] = {fg=colors.magenta}
-	syntax['cPreCondit'] = {fg=colors.orange}
+	syntax['cPreCondit'] = {fg=colors.base0}
 	syntax['VarId'] = {fg=colors.blue}
 	syntax['ConId'] = {fg=colors.yellow}
 	syntax['hsImport'] = {fg=colors.magenta}
@@ -195,7 +195,7 @@ function M.load_syntax(colors)
 	syntax['hsStatement'] = {fg=colors.cyan}
 	syntax['hsImportLabel'] = {fg=colors.cyan}
 	syntax['hs_OpFunctionName'] = {fg=colors.yellow}
-	syntax['hs_DeclareFunction'] = {fg=colors.orange}
+	syntax['hs_DeclareFunction'] = {fg=colors.base0}
 	syntax['hsVarSym'] = {fg=colors.cyan}
 	syntax['hsType'] = {fg=colors.yellow}
 	syntax['hsTypedef'] = {fg=colors.cyan}
@@ -555,7 +555,7 @@ function M.load_syntax(colors)
 	syntax['CmpItemKindTypeParameter' ] = {fg=colors.base1, bg=colors.none }
 	syntax['CmpItemKindEnumMember' ] = {fg=colors.base1, bg=colors.none }
 	syntax['CmpItemKindOperator' ] = {fg=colors.base1, bg=colors.none }
-	syntax['CmpItemKindSnippet' ] = {fg=colors.orange, bg=colors.none }
+	syntax['CmpItemKindSnippet' ] = {fg=colors.base0, bg=colors.none }
 
 	syntax['NavicIconsFile'] = syntax['CmpItemKindFile']
 	syntax['NavicIconsModule'] = syntax['CmpItemKindModule']
