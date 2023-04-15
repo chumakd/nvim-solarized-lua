@@ -115,7 +115,7 @@ function M.load_syntax(colors)
 	syntax['PmenuSbar'] = {fg=colors.none,bg=colors.base01}
 	syntax['PmenuSel'] = {fg=colors.base2,bg=colors.base00}
 	syntax['PmenuThumb'] = {fg=colors.none,bg=colors.base0}
-	syntax['Question'] = {fg=colors.cyan,style='bold'}
+	syntax['Question'] = {fg=colors.base2,style='bold'}
 	syntax['Search'] = {fg=colors.yellow,style='reverse'}
 	syntax['YankPaste'] = {fg=colors.violet,style='reverse'}
 	syntax['SignColumn'] = {fg=colors.base0,bg=utils.termtrans(colors.base02)}
@@ -190,15 +190,15 @@ function M.load_syntax(colors)
 	syntax['ConId'] = {fg=colors.yellow}
 	syntax['hsImport'] = {fg=colors.base2}
 	syntax['hsString'] = {fg=colors.base00}
-	syntax['hsStructure'] = {fg=colors.cyan}
+	syntax['hsStructure'] = {fg=colors.base1}
 	syntax['hs_hlFunctionName'] = {fg=colors.base1,style=utils.italics()}
-	syntax['hsStatement'] = {fg=colors.cyan}
-	syntax['hsImportLabel'] = {fg=colors.cyan}
+	syntax['hsStatement'] = {fg=colors.base00}
+	syntax['hsImportLabel'] = {fg=colors.base2}
 	syntax['hs_OpFunctionName'] = {fg=colors.base01}
 	syntax['hs_DeclareFunction'] = {fg=colors.base0}
-	syntax['hsVarSym'] = {fg=colors.cyan}
+	syntax['hsVarSym'] = {fg=colors.base0}
 	syntax['hsType'] = {fg=colors.base01}
-	syntax['hsTypedef'] = {fg=colors.cyan}
+	syntax['hsTypedef'] = {fg=colors.base01}
 	syntax['hsModuleName'] = {fg=colors.base1}
 	syntax['pandocTitleBlock'] = {fg=colors.blue}
 	syntax['pandocTitleBlockTitle'] = {fg=colors.blue,style='bold'}
