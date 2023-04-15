@@ -104,7 +104,7 @@ function M.load_syntax(colors)
 	syntax['ColorColumn'] = {fg=colors.none,bg=utils.termtrans(colors.base02)}
 	syntax['Conceal'] = {fg=colors.blue}
 	syntax['CursorColumn'] = {fg=colors.none,bg=utils.termtrans(colors.base02)}
-	syntax['Directory'] = {fg=colors.blue}
+	syntax['Directory'] = {fg=colors.base01}
 	syntax['EndOfBuffer'] = {fg=colors.none,ctermfg=colors.none,ctermbg=colors.none}
 	syntax['ErrorMsg'] = {fg=colors.red,bg=colors.err_bg,style='reverse'}
 	syntax['IncSearch'] = {fg=colors.orange,style='standout'}
@@ -191,7 +191,7 @@ function M.load_syntax(colors)
 	syntax['hsImport'] = {fg=colors.magenta}
 	syntax['hsString'] = {fg=colors.base00}
 	syntax['hsStructure'] = {fg=colors.cyan}
-	syntax['hs_hlFunctionName'] = {fg=colors.blue}
+	syntax['hs_hlFunctionName'] = {fg=colors.base1,style=utils.italics()}
 	syntax['hsStatement'] = {fg=colors.cyan}
 	syntax['hsImportLabel'] = {fg=colors.cyan}
 	syntax['hs_OpFunctionName'] = {fg=colors.base01}
