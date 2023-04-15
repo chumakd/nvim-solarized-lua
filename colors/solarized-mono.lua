@@ -52,5 +52,3 @@ if vim.o.bg == 'dark' then
 	solarized_mono.load_syntax(darkColors)
 	solarized_mono.terminal_colors(darkColors)
 end
-
-print('DEBUG mono XXX-dc')

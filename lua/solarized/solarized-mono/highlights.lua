@@ -123,18 +123,18 @@ function M.load_syntax(colors)
 	syntax['VisualNOS'] = {fg=colors.none,bg=colors.base02,style='reverse'}
 	syntax['WarningMsg'] = {fg=colors.orange,style='bold'}
 	syntax['WildMenu'] = {fg=colors.base2,bg=colors.base02,style='reverse'}
-	syntax['Comment'] = {fg=colors.base01,style=utils.italics()}
-	syntax['Constant'] = {fg=colors.cyan}
+	syntax['Comment'] = {fg=colors.base02,style=utils.italics()}
+	syntax['Constant'] = {fg=colors.base00}
 	syntax['CursorIM'] = {fg=colors.none,bg=colors.base1}
 	syntax['Error'] = {fg=colors.red,bg=colors.err_bg,style='bold,reverse'}
-	syntax['Identifier'] = {fg=colors.blue}
+	syntax['Identifier'] = {fg=colors.base0}
 	syntax['Ignore'] = {fg=colors.none,ctermfg=colors.none,ctermbg=colors.none}
 	syntax['PreProc'] = {fg=colors.orange}
-	syntax['Special'] = {fg=colors.orange}
-	syntax['Statement'] = {fg=colors.green}
+	syntax['Special'] = {fg=colors.base0,style='bold'}
+	syntax['Statement'] = {fg=colors.base0,style='bold'}
 	syntax['Todo'] = {fg=colors.magenta,style='bold'}
 	syntax['Type'] = {fg=colors.yellow}
-	syntax['Text'] = {fg=colors.cyan}
+	syntax['Text'] = {fg=colors.base01}
 	syntax['Strikethrough'] = {fg=colors.base01,strikethrough=true}
 	syntax['Underlined'] = {fg=colors.violet}
 	syntax['NormalMode'] = {fg=colors.base0,bg=colors.base3,style='reverse'}
@@ -292,7 +292,7 @@ function M.load_syntax(colors)
 	syntax['Conditional'] = syntax['Statement']
 	syntax['Debug'] = syntax['Special']
 	syntax['Define'] = syntax['PreProc']
-	syntax['Delimiter'] = syntax['Special']
+	syntax['Delimiter'] = syntax['Identifier']
 	syntax['Exception'] = syntax['Statement']
 	syntax['Float'] = syntax['Constant']
 	syntax['Function'] = syntax['Identifier']
@@ -371,7 +371,7 @@ function M.load_syntax(colors)
 	syntax['TSParameterReference'] = syntax['Identifier']
 	syntax['TSProperty'] = syntax['TSField']
 	syntax['TSPunctDelimiter'] = syntax['Delimiter']
-	syntax['TSPunctBracket'] = syntax['Delimiter']
+	syntax['TSPunctBracket'] = syntax['Constant']
 	syntax['TSPunctSpecial'] = syntax['Special']
 	syntax['TSRepeat'] = syntax['Repeat']
 	syntax['TSString'] = syntax['Constant']
@@ -402,9 +402,9 @@ function M.load_syntax(colors)
 	-- }}}
 
 	-- Punctuation {{{
-	syntax['@punctuation.delimiter'] = syntax['Statement']
-	syntax['@punctuation.bracket'] = syntax['Delimiter']
-	syntax['@punctuation.special'] = syntax['Delimiter']
+	syntax['@punctuation.delimiter'] = syntax['Delimiter']
+	syntax['@punctuation.bracket'] = syntax['Constant']
+	syntax['@punctuation.special'] = syntax['Special']
 	-- }}}
 
 	-- Literals {{{
