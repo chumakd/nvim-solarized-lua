@@ -295,7 +295,11 @@ function M.load_syntax(colors)
 	syntax['Delimiter'] = syntax['Identifier']
 	syntax['Exception'] = syntax['Statement']
 	syntax['Float'] = syntax['Constant']
-	syntax['Function'] = syntax['Identifier']
+	if g.solarized_visibility == 'high' then
+		syntax['Function'] = {fg=colors.base1}
+	else
+		syntax['Function'] = syntax['Identifier']
+	end
 	syntax['Include'] = syntax['PreProc']
 	syntax['Keyword'] = syntax['Statement']
 	syntax['Label'] = syntax['Statement']
