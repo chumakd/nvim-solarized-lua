@@ -499,6 +499,49 @@ function M.load_syntax(colors)
 	-- }}}
 	-- END Neovim >= 0.8
 
+	-- BEGIN Neovim >= 0.9
+	-- Neovim LSP semantic highlights.
+	syntax['@lsp.mod.deprecated'] = syntax['@constant']
+	syntax['@lsp.mod.readonly'] = syntax['@constant']
+	syntax['@lsp.mod.typeHint'] = syntax['@type']
+	syntax['@lsp.type.boolean'] = syntax['@boolean']
+	syntax['@lsp.type.builtinConstant'] = syntax['@constant.builtin']
+	syntax['@lsp.type.builtinType'] = syntax['@type.builtin']
+	syntax['@lsp.type.class'] = syntax['@type']
+	syntax['@lsp.type.enum'] = syntax['@type']
+	syntax['@lsp.type.enumMember'] = syntax['@property']
+	syntax['@lsp.type.escapeSequence'] = syntax['@string.escape']
+	syntax['@lsp.type.formatSpecifier'] = syntax['@punctuation.special']
+	syntax['@lsp.type.interface'] = syntax['@type']
+	syntax['@lsp.type.keyword'] = syntax['@keyword']
+	syntax['@lsp.type.magicFunction'] = syntax['@function.builtin']
+	syntax['@lsp.type.namespace'] = syntax['@namespace']
+	syntax['@lsp.type.number'] = syntax['@number']
+	syntax['@lsp.type.operator'] = syntax['@operator']
+	syntax['@lsp.type.parameter'] = syntax['@parameter']
+	syntax['@lsp.type.property'] = syntax['@property']
+	syntax['@lsp.type.selfKeyword'] = syntax['@variable.builtin']
+	syntax['@lsp.type.selfParameter'] = syntax['@variable.builtin']
+	syntax['@lsp.type.struct'] = syntax['@type']
+	syntax['@lsp.type.typeAlias'] = syntax['@type.definition']
+	syntax['@lsp.type.variable'] = syntax['@variable']
+	syntax['@lsp.typemod.class.defaultLibrary'] = syntax['@type.builtin']
+	syntax['@lsp.typemod.enum.defaultLibrary'] = syntax['@type']
+	syntax['@lsp.typemod.enumMember.defaultLibrary'] = syntax['@constant.builtin']
+	syntax['@lsp.typemod.function.defaultLibrary'] = syntax['@function.builtin']
+	syntax['@lsp.typemod.keyword.async'] = syntax['@keyword']
+	syntax['@lsp.typemod.method.defaultLibrary'] = syntax['@function.builtin']
+	syntax['@lsp.typemod.operator.injected'] = syntax['@operator']
+	syntax['@lsp.typemod.string.injected'] = syntax['@string']
+	syntax['@lsp.typemod.variable.defaultLibrary'] = syntax['@variable.builtin']
+	syntax['@lsp.typemod.variable.global'] = syntax['@constant']
+	syntax['@lsp.typemod.variable.injected'] = syntax['@variable']
+	syntax['@lsp.typemod.variable.readonly'] = syntax['@constant']
+	syntax['@lsp.typemod.variable.static'] = syntax['@constant']
+	-- Language specific LSP semantic overrides.
+	--syntax['@lsp.type.macro.rust'] = syntax['@function']
+	-- END Neovim >= 0.9
+
 	syntax['DiagnosticError'] = {fg=colors.red,guisp=colors.red,bg=utils.termtrans(colors.base02),style='none'}
 	syntax['DiagnosticWarn'] = {fg=colors.yellow,guisp=colors.yellow,bg=utils.termtrans(colors.base02),style='none'}
 	syntax['DiagnosticInfo'] = {fg=colors.cyan,guisp=colors.cyan,bg=utils.termtrans(colors.base02),style='none'}
