@@ -431,7 +431,9 @@ function M.load_syntax(colors)
 	syntax['@method.call'] = syntax['Function']
 
 	syntax['@constructor'] = syntax['Special']
-	syntax['@parameter'] = {fg=colors.base0}
+	--syntax['@parameter'] = {fg=colors.base0}
+	--syntax['@parameter'] = {fg=colors.magenta}
+	syntax['@parameter'] = {fg=colors.base1,style=utils.italics()}
 	-- }}}
 
 	-- Keywords {{{
