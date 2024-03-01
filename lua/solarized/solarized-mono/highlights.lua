@@ -326,6 +326,7 @@ function M.load_syntax(colors)
 	syntax['vimSet'] = syntax['Normal']
 	syntax['vimSetEqual'] = syntax['Normal']
 	syntax['diffAdded'] = syntax['Statement']
+	syntax['diffRemoved'] = syntax['NonText']
 	syntax['diffLine'] = syntax['Identifier']
 	syntax['gitcommitUntracked'] = syntax['gitcommitComment']
 	syntax['gitcommitDiscarded'] = syntax['gitcommitComment']
